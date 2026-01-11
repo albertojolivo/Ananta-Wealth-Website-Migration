@@ -3928,7 +3928,7 @@
 		!function (f, b, e, v, n, t, s) {
 			if (f.fbq) return; n = f.fbq = function () {
 				n.callMethod ?
-				n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+					n.callMethod.apply(n, arguments) : n.queue.push(arguments)
 			}; if (!f._fbq) f._fbq = n;
 			n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0;
 			t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
@@ -3987,6 +3987,36 @@
 			font-weight: 400;
 			font-display: fallback;
 			src: url('https://anantawealth.com/wp-content/plugins/woocommerce/assets/fonts/cardo_normal_400.woff2') format('woff2');
+		}
+	</style>
+	<style>
+		/* Global Font Override: Inter for all non-header/title text */
+		body,
+		p,
+		li,
+		blockquote,
+		input,
+		textarea,
+		select,
+		.elementskit-infobox .box-body>p,
+		.elementor-text-editor p,
+		.elementor-icon-box-description {
+			font-family: 'Inter', sans-serif !important;
+		}
+
+		/* Target secondary text in Elementor while protecting headers */
+		.elementor-widget-text-editor,
+		.elementor-widget-icon-box .elementor-icon-box-description,
+		.elementor-button-text {
+			font-family: 'Inter', sans-serif !important;
+		}
+
+		/* Ensure buttons and links also use Inter if they aren't explicitly titles */
+		.elementor-button,
+		.mfn-link,
+		.button,
+		.action_button {
+			font-family: 'Inter', sans-serif !important;
 		}
 	</style>
 	<link rel="icon" href="https://anantawealth.com/wp-content/uploads/2025/11/Ananta-Wealth-Logo-Favicon-75x75.png"
@@ -6207,7 +6237,8 @@
 
 																					<p>You want someone to tell you
 																						<em>exactly</em> what to do so
-																						you don’t have to think.</p>
+																						you don’t have to think.
+																					</p>
 																				</li>
 
 
