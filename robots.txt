@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://anantawealth.com/sitemap.xml

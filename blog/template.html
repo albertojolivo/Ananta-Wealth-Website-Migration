@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>{{TITLE}} | Ananta Wealth</title>
+    <meta name="description" content="{{DESCRIPTION}}" />
+    <link rel="canonical" href="{{CANONICAL_URL}}" />
+
+    <!-- Open Graph / SEO -->
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="{{TITLE}}" />
+    <meta property="og:description" content="{{DESCRIPTION}}" />
+    <meta property="og:url" content="{{CANONICAL_URL}}" />
+    <meta property="og:site_name" content="Ananta Wealth" />
+    <meta property="og:image" content="{{IMAGE}}" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "{{TITLE}}",
+      "image": ["{{IMAGE}}"],
+      "datePublished": "{{DATE}}",
+      "dateModified": "{{DATE}}",
+      "author": [{
+          "@type": "Person",
+          "name": "Alberto Olivo",
+          "url": "https://anantawealth.com"
+        }]
+    }
+    </script>
+
+    <!-- Stylesheets (Adjusted paths for subfolder) -->
+    <link rel='stylesheet' href='../css/be.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='../css/animations.min.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='../css/responsive.css' type='text/css' media='all' />
+    <link rel='stylesheet'
+        href='https://fonts.googleapis.com/css?family=Inter%3A300%2C400%2C500%2C600%2C700%7CSpace+Grotesk%3A300%2C400%2C500%2C600%2C700&display=swap'
+        type='text/css' media='all' />
+
+    <style>
+        body {
+            background-color: #112429;
+            color: #EDE9E3;
+            font-family: 'Inter', sans-serif;
+        }
+
+        #Content {
+            padding: 80px 0;
+        }
+
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .article-header {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .article-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 48px;
+            color: #C2A97C;
+            margin-bottom: 10px;
+        }
+
+        .article-meta {
+            font-size: 14px;
+            opacity: 0.7;
+            margin-bottom: 20px;
+        }
+
+        .article-featured-image {
+            width: 100%;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        .article-content {
+            line-height: 1.8;
+            font-size: 18px;
+        }
+
+        .article-content h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            color: #C2A97C;
+            margin-top: 40px;
+            font-size: 32px;
+        }
+
+        .article-content p {
+            margin-bottom: 20px;
+        }
+
+        .article-content blockquote {
+            border-left: 4px solid #C2A97C;
+            padding-left: 20px;
+            font-style: italic;
+            margin: 30px 0;
+        }
+
+        /* Table of Contents */
+        .toc-wrapper {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(194, 169, 124, 0.2);
+        }
+
+        .toc-title {
+            font-weight: 700;
+            color: #C2A97C;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .toc-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .toc-list li {
+            margin-bottom: 8px;
+        }
+
+        .toc-list a {
+            color: #EDE9E3;
+            text-decoration: none;
+            transition: 0.3s;
+            opacity: 0.8;
+        }
+
+        .toc-list a:hover {
+            color: #C2A97C;
+            opacity: 1;
+        }
+
+        /* Related Articles */
+        .related-articles {
+            margin-top: 80px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .related-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 28px;
+            color: #C2A97C;
+            margin-bottom: 30px;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .related-item {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .related-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .related-thumb {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .related-info {
+            padding: 20px;
+        }
+
+        .related-item-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #EDE9E3;
+            text-decoration: none;
+        }
+
+        /* Navigation Override */
+        #Top_bar {
+            background: transparent !important;
+        }
+
+        .logo-main {
+            max-height: 80px;
+            width: auto;
+        }
+
+        @media (max-width: 768px) {
+            .article-title {
+                font-size: 32px;
+            }
+
+            .related-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body class="color-custom layout-full-width header-creative header-open">
+
+    <div id="Wrapper">
+        <!-- Reusing Header structure from index.html -->
+        <div id="Header_creative" class="">
+            <div class="creative-social">
+                <ul class="social">
+                    <li class="youtube"><a href="https://www.youtube.com/@anantawealth"><img
+                                src="../images/social/youtube.png" style="width: 24px; filter: invert(90%);"></a></li>
+                    <li class="linkedin"><a href="https://www.linkedin.com/in/alberto-olivo/"><img
+                                src="../images/social/linkedin.png" style="width: 24px; filter: invert(90%);"></a></li>
+                    <li class="instagram"><a href="https://www.instagram.com/anantawealth/"><img
+                                src="../images/social/instagram.png" style="width: 24px; filter: invert(90%);"></a></li>
+                    <li class="tiktok"><a href="https://www.tiktok.com/@ananta.wealth"><img
+                                src="../images/social/tiktok.png" style="width: 24px; filter: invert(90%);"></a></li>
+                </ul>
+            </div>
+            <div class="creative-wrapper">
+                <div id="Top_bar">
+                    <div class="logo">
+                        <a id="logo" href="../index.html"><img
+                                src="../images/Full-Logo-Background-Removed_White-Font.png" alt="Ananta Wealth"
+                                style="height: 60px;"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="Content">
+            <article class="article-container" id="printable-article">
+                <header class="article-header">
+                    <div class="article-meta">{{CATEGORY}} • {{DATE}}</div>
+                    <h1 class="article-title">{{TITLE}}</h1>
+                    <div class="article-author">By Alberto Olivo</div>
+                </header>
+
+                <img src="{{IMAGE}}" alt="{{TITLE}}" class="article-featured-image">
+
+                <div class="toc-wrapper">
+                    <div class="toc-title">Table of Contents</div>
+                    <ul class="toc-list" id="article-toc">
+                        <!-- Auto-generated -->
+                    </ul>
+                </div>
+
+                <div class="article-content" id="article-body">
+                    {{CONTENT}}
+                </div>
+
+                <footer class="related-articles">
+                    <h3 class="related-title">You Might Also Like</h3>
+                    <div class="related-grid" id="related-container">
+                        <!-- Related articles placeholder -->
+                    </div>
+                </footer>
+            </article>
+        </div>
+
+        <footer id="Footer" class="clearfix mfn-footer">
+            <div class="footer_copy">
+                <div class="container">
+                    <div class="column one">
+                        <div class="copyright">
+                            &copy; 2026 Ananta Wealth | All Rights Reserved
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- TOC Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const body = document.getElementById('article-body');
+            const toc = document.getElementById('article-toc');
+            const headings = body.querySelectorAll('h2');
+
+            headings.forEach((heading, index) => {
+                const id = 'heading-' + index;
+                heading.id = id;
+                const li = document.createElement('li');
+                const a = document.createElement('a');
+                a.href = '#' + id;
+                a.textContent = heading.textContent;
+                li.appendChild(a);
+                toc.appendChild(li);
+            });
+        });
+    </script>
+</body>
+
+</html>
